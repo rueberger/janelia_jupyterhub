@@ -465,7 +465,7 @@ c.JupyterHub.ip = '*'
 #  already.
 #
 #  Supports Linux and BSD variants only.
-#c.LocalAuthenticator.create_system_users = False
+c.LocalAuthenticator.create_system_users = False
 
 ## Whitelist all users from this UNIX group.
 #
