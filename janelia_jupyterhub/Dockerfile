@@ -10,5 +10,6 @@ ADD . /srv/jupyterhub
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
+EXPOSE 389
 
 CMD jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
