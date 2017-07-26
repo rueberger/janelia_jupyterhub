@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:latest
+FROM rueberger/jupyterhub_base:latest
 
 WORKDIR /srv/jupyterhub
 
