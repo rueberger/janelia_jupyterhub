@@ -585,8 +585,8 @@ c.JupyterHub.ip = '*'
 # LDAP config
 #------------------------------------------------------------------------------
 
-c.LDAPAuthenticator.server_address = 'ldap.int.janelia.org'
+c.LDAPAuthenticator.server_address = 'ldap-vip1.int.janelia.org'
 
-c.LDAPAuthenticator.bind_dn_template = 'uid={username},ou=People,dc=janelia,dc=org'
+c.LDAPAuthenticator.bind_dn_template = 'uid={username},dc=hhmi,dc=org'
 
 c.LDAPAuthenticator.use_ssl = False
