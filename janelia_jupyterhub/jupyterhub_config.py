@@ -197,7 +197,7 @@ c.JupyterHub.ip = '*'
 ## The class to use for spawning single-user servers.
 #
 #  Should be a subclass of Spawner.
-c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
+#c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
 
 ## Path to SSL certificate file for the public facing interface of the proxy
 #
