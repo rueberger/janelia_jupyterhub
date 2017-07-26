@@ -1,21 +1,6 @@
 # Configuration file for jupyterhub.
 
 #------------------------------------------------------------------------------
-# Application(SingletonConfigurable) configuration
-#------------------------------------------------------------------------------
-
-## This is an application.
-
-## The date format used by logging formatters for %(asctime)s
-#c.Application.log_datefmt = '%Y-%m-%d %H:%M:%S'
-
-## The Logging format template
-#c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
-
-## Set the log level by value or name.
-#c.Application.log_level = 30
-
-#------------------------------------------------------------------------------
 # JupyterHub(Application) configuration
 #------------------------------------------------------------------------------
 
@@ -212,7 +197,7 @@ c.JupyterHub.ip = '*'
 ## The class to use for spawning single-user servers.
 #
 #  Should be a subclass of Spawner.
-#c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
+c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
 
 ## Path to SSL certificate file for the public facing interface of the proxy
 #
@@ -446,78 +431,6 @@ c.JupyterHub.ip = '*'
 #  takes longer than this. start should return when the server process is started
 #  and its location is known.
 #c.Spawner.start_timeout = 60
-
-#------------------------------------------------------------------------------
-# LocalProcessSpawner(Spawner) configuration
-#------------------------------------------------------------------------------
-
-## A Spawner that uses `subprocess.Popen` to start single-user servers as local
-#  processes.
-#
-#  Requires local UNIX users matching the authenticated users to exist. Does not
-#  work on Windows.
-#
-#  This is the default spawner for JupyterHub.
-
-## Seconds to wait for single-user server process to halt after SIGINT.
-#
-#  If the process has not exited cleanly after this many seconds, a SIGTERM is
-#  sent.
-#c.LocalProcessSpawner.INTERRUPT_TIMEOUT = 10
-
-## Seconds to wait for process to halt after SIGKILL before giving up.
-#
-#  If the process does not exit cleanly after this many seconds of SIGKILL, it
-#  becomes a zombie process. The hub process will log a warning and then give up.
-#c.LocalProcessSpawner.KILL_TIMEOUT = 5
-
-## Seconds to wait for single-user server process to halt after SIGTERM.
-#
-#  If the process does not exit cleanly after this many seconds of SIGTERM, a
-#  SIGKILL is sent.
-#c.LocalProcessSpawner.TERM_TIMEOUT = 5
-
-#------------------------------------------------------------------------------
-# Authenticator(LoggingConfigurable) configuration
-#------------------------------------------------------------------------------
-
-## Base class for implementing an authentication provider for JupyterHub
-
-## Set of users that will have admin rights on this JupyterHub.
-#
-#  Admin users have extra privilages:
-#   - Use the admin panel to see list of users logged in
-#   - Add / remove users in some authenticators
-#   - Restart / halt the hub
-#   - Start / stop users' single-user servers
-#   - Can access each individual users' single-user server (if configured)
-#
-#  Admin access should be treated the same way root access is.
-#
-#  Defaults to an empty set, in which case no user has admin access.
-#c.Authenticator.admin_users = set()
-
-## Dictionary mapping authenticator usernames to JupyterHub users.
-#
-#  Primarily used to normalize OAuth user names to local users.
-#c.Authenticator.username_map = {}
-
-## Regular expression pattern that all valid usernames must match.
-#
-#  If a username does not match the pattern specified here, authentication will
-#  not be attempted.
-#
-#  If not set, allow any username.
-#c.Authenticator.username_pattern = ''
-
-## Whitelist of usernames that are allowed to log in.
-#
-#  Use this with supported authenticators to restrict which users can log in.
-#  This is an additional whitelist that further restricts users, beyond whatever
-#  restrictions the authenticator has in place.
-#
-#  If empty, does not perform any additional restriction.
-#c.Authenticator.whitelist = set()
 
 #------------------------------------------------------------------------------
 # LocalAuthenticator(Authenticator) configuration
