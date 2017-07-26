@@ -587,4 +587,4 @@ c.JupyterHub.ip = '*'
 
 c.LDAPAuthenticator.server_address = 'ldap.int.janelia.org'
 
-c.LDAPAuthenticator.bind_dn_template = 'uid={username},dc=janelia,dc=org, ou=People'
+c.LDAPAuthenticator.bind_dn_template = 'dc=janelia,dc=org, ou=People'
