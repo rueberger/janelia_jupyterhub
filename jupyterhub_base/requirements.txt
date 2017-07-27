@@ -3,4 +3,3 @@ keras
 bokeh
 matplotlib
 jupyterhub-ldapauthenticator
-dockerspawner
