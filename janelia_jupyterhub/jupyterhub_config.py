@@ -14,7 +14,7 @@ c.DockerSpawner.use_internal_ip = True
 c.DockerSpawner.network_name = network_name
 # Pass the network name as argument to spawned containers
 c.DockerSpawner.extra_host_config = { 'network_mode': network_name }
-c.DockerSpawner.extra_start_kwargs = { 'network_mode': network_name }
+#c.DockerSpawner.extra_start_kwargs = { 'network_mode': network_name }
 # User containers will access hub by container name on the Docker network
 c.JupyterHub.hub_ip = ''
 c.JupyterHub.hub_port = 8080
