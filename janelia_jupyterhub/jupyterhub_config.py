@@ -11,7 +11,7 @@ c.DockerSpawner.network_name = network_name
 c.DockerSpawner.extra_host_config = { 'network_mode': network_name }
 c.DockerSpawner.extra_start_kwargs = { 'network_mode': network_name }
 # User containers will access hub by container name on the Docker network
-c.JupyterHub.hub_ip = '*'
+c.JupyterHub.hub_ip = ''
 c.JupyterHub.hub_port = 8080
 
 c.DockerSpawner.container_ip = '0.0.0.0'
@@ -19,7 +19,7 @@ c.DockerSpawner.hub_ip_connect = 'jhub'
 
 
 ## The public facing ip of the whole application (the proxy)
-c.JupyterHub.ip = '*'
+c.JupyterHub.ip = ''
 
 ## The class to use for spawning single-user servers.
 #
