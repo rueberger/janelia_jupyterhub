@@ -2,6 +2,11 @@
 
 c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
 
+c.JupyterHub.log_level = 'DEBUG'
+c.Spawner.debug = True
+
+c.JupyterHub.extra_log_file = '/var/log/jupyterhub.log'
+
 
 # Connect containers to this Docker network
 network_name = 'jhub'
