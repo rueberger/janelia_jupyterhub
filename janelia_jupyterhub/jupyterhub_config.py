@@ -57,6 +57,9 @@ c.DockerSpawner.extra_start_kwargs = { 'network_mode': network_name }
 c.JupyterHub.hub_ip = 'jupyterhub'
 c.JupyterHub.hub_port = 8080
 
+c.DockerSpawner.container_ip = '0.0.0.0'
+c.DockerSpawner.hub_ip_connect = c.JupyterHub.hub_ip
+
 ## The base URL of the entire application
 #c.JupyterHub.base_url = '/'
 
