@@ -54,7 +54,7 @@ c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
 # c.DockerSpawner.extra_host_config = { 'network_mode': network_name }
 # c.DockerSpawner.extra_start_kwargs = { 'network_mode': network_name }
 # # User containers will access hub by container name on the Docker network
-c.JupyterHub.hub_ip = '127.0.0.1'
+#c.JupyterHub.hub_ip = '127.0.0.1'
 # c.JupyterHub.hub_port = 8080
 
 # c.DockerSpawner.container_ip = '0.0.0.0'
@@ -139,7 +139,7 @@ c.JupyterHub.hub_ip = '127.0.0.1'
 #c.JupyterHub.hub_port = 8081
 
 ## The public facing ip of the whole application (the proxy)
-c.JupyterHub.ip = '*'
+c.JupyterHub.ip = '0.0.0.0'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.JupyterHub.jinja_environment_options = {}
