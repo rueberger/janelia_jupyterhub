@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:latest
+FROM jupyterhub/jupyterhub:0.7.2
 
 WORKDIR /srv/jupyterhub
 
@@ -11,4 +11,4 @@ RUN  git clone https://github.com/jupyterhub/dockerspawner.git && \
      cd ..
 
 EXPOSE 8000
-EXPOSE 389
+jEXPOSE 389
