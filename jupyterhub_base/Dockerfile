@@ -11,4 +11,4 @@ RUN  git clone https://github.com/jupyterhub/dockerspawner.git && \
      cd ..
 
 EXPOSE 8000
-jEXPOSE 389
+EXPOSE 389
