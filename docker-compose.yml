@@ -12,4 +12,4 @@ services:
     networks:
       - jhub
   networks:
-      - jhub
+    jhub:
