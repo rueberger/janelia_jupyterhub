@@ -11,9 +11,9 @@ services:
       - "8000:8000"
       - "8080:8080"
     networks:
-      - jhub
+      - jupyterhub-network
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 networks:
   jupyterhub-network:
-    external: true
+    driver: overlay
