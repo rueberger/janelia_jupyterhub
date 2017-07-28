@@ -1,4 +1,3 @@
-FROM docker:dind
 FROM jupyterhub/jupyterhub:0.7.2
 
 WORKDIR /srv/jupyterhub
