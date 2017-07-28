@@ -10,9 +10,5 @@ RUN  git clone https://github.com/jupyterhub/dockerspawner.git && \
      pip install . && \
      cd ..
 
-RUN wget https://get.docker.com -q -O /tmp/getdocker && \
-    chmod +x /tmp/getdocker && \
-    sh /tmp/getdocker
-
 EXPOSE 8000
 EXPOSE 389
