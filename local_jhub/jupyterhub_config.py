@@ -26,7 +26,7 @@ c.JupyterHub.ip = ''
 # Authenticator config
 #------------------------------------------------------------------------------
 
-c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPLocalAuthenticator'
+c.JupyterHub.authenticator_class = 'ldapauthenticator.ldapauthenticator.LDAPLocalAuthenticator'
 
 c.LDAPAuthenticator.server_address = 'ldap-vip1.int.janelia.org'
 
