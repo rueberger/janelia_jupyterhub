@@ -10,7 +10,7 @@ RUN  git clone https://github.com/jupyterhub/dockerspawner.git && \
      pip install . && \
      cd ..
 
-RUN  git clone git@github.com:gkdb/ldapauthenticator.git && \
+RUN  git clone https://github.com/gkdb/ldapauthenticator.git && \
      cd ldapauthenticator && \
      pip install . && \
      cd ..
