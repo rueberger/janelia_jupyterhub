@@ -12,6 +12,7 @@ c.JupyterHub.extra_log_file = '/var/log/jupyterhub.log'
 network_name = 'juypterhub_jupyterhub-network'
 c.DockerSpawner.use_internal_ip = True
 c.DockerSpawner.network_name = network_name
+c.DockerSpawner.container_image = 'rueberger/vae_tutorial:latest'
 # Pass the network name as argument to spawned containers
 c.DockerSpawner.extra_host_config = { 'network_mode': network_name }
 #c.DockerSpawner.extra_start_kwargs = { 'network_mode': network_name }
