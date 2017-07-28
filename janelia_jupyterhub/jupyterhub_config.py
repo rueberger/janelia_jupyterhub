@@ -20,7 +20,7 @@ c.JupyterHub.hub_ip = ''
 c.JupyterHub.hub_port = 8080
 
 c.DockerSpawner.container_ip = '0.0.0.0'
-c.DockerSpawner.hub_ip_connect = 'jhub'
+c.DockerSpawner.hub_ip_connect = 'jupyterhub'
 
 
 ## The public facing ip of the whole application (the proxy)
