@@ -16,3 +16,4 @@ services:
 networks:
   jupyterhub-network:
     driver: overlay
+    external: true
