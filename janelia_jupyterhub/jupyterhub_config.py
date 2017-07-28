@@ -9,7 +9,7 @@ c.JupyterHub.extra_log_file = '/var/log/jupyterhub.log'
 
 
 # Connect containers to this Docker network
-network_name = 'jhub'
+network_name = 'jhub_stack_jhub'
 c.DockerSpawner.use_internal_ip = True
 c.DockerSpawner.network_name = network_name
 # Pass the network name as argument to spawned containers
