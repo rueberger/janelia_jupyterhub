@@ -26,10 +26,10 @@ c.JupyterHub.ip = ''
 # Authenticator config
 #------------------------------------------------------------------------------
 
-c.JupyterHub.authenticator_class = 'ldapauthenticator.ldapauthenticator.LDAPLocalAuthenticator'
+# c.JupyterHub.authenticator_class = 'ldapauthenticator.ldapauthenticator.LDAPLocalAuthenticator'
 
-c.LDAPAuthenticator.server_address = 'ldap-vip1.int.janelia.org'
+# c.LDAPAuthenticator.server_address = 'ldap-vip1.int.janelia.org'
 
-c.LDAPAuthenticator.bind_dn_template = 'cn={username},ou=People,dc=hhmi,dc=org'
+# c.LDAPAuthenticator.bind_dn_template = 'cn={username},ou=People,dc=hhmi,dc=org'
 
-c.LDAPAuthenticator.use_ssl = False
+# c.LDAPAuthenticator.use_ssl = False
