@@ -10,5 +10,7 @@ RUN  git clone https://github.com/jupyterhub/dockerspawner.git && \
      pip install . && \
      cd ..
 
+RUN apt-get -yqq update && apt-get -yqq install docker.io
+
 EXPOSE 8000
 EXPOSE 389
